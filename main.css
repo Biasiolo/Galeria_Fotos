@@ -14,7 +14,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 4px solid #005B8D; /* Azul escuro para a borda */
+    border-bottom: 5px solid #005B8D; /* Azul escuro para a borda */
     text-transform: uppercase;
 }
 
@@ -32,13 +32,13 @@ header button {
 /* Estilização do formulário */
 form {
     background-color: #baddf1; /* Fundo cinza claro */
-    padding: 24px 0;
+    padding: 12px 0;
     text-align: center;
     display: none;
 }
 
 form h2 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     color: #023c63;
 }
 
@@ -52,7 +52,7 @@ input{
     border-radius: 8px;
 }
 
-button, #botao-add, #botao-cancelar {
+button, #botao-add, #botao-cancelar, #salvar-enderecos {
     background-color: #007ACC; 
     color: #FFFFFF;
     border-radius: 8px;
@@ -64,10 +64,17 @@ button, #botao-add, #botao-cancelar {
     border: 0.5px solid #023c63;
 }
 
+#salvar-enderecos {
+    margin-left: 80%;
+    padding: 8px;
+    font-size: 8px;
+    background-color: #023c63;
+    color:#007ACC;
+}
 /* Estilização dos botões específicos */
 
 /* Efeito de hover nos botões */
-button:hover, #botao-cancelar:hover, #botao-add:hover {
+button:hover, #botao-cancelar:hover, #botao-add:hover, #salvar-enderecos:hover {
     background-color: #005B8D; /* Azul escuro ao passar o mouse */
 }
 

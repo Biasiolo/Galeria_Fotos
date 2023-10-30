@@ -11,7 +11,9 @@ $(document).ready(function() {
         $('form').slideUp(500); // A animação levará 500 milissegundos (0,5 segundos)
     });
 
-    // Previne o envio padrão do formulário
+    // Array para armazenar endereços
+    const enderecos = [];
+
     $('form').on('submit', function(e) {
         e.preventDefault();
         const endNovaImagem = $('#end-imagem').val();
@@ -19,8 +21,33 @@ $(document).ready(function() {
         $(`<img src="${endNovaImagem}" alt="Nova Imagem" />`).appendTo(novoItem);
         $(`<div class="overlay-imagem"><a href="${endNovaImagem}" target="_blank" title="Ver imagem ampliada">Ver imagem ampliada</a></div>`).appendTo(novoItem);
         $('ul').append(novoItem);
-        novoItem.fadeIn(1000); // Aplicar fadeIn para o novo item com 500 milissegundos
+        novoItem.fadeIn(1000); // Aplicar fadeIn para o novo item com 1000 milissegundos (1 segundo)
         $('form')[0].reset(); // Limpa o formulário
-        $('form').slideUp(500); // Fecha o formulário mais lentamente
+
+        // Adicione o endereço à lista de endereços
+        enderecos.push(endNovaImagem);
+    });
+
+    // Quando o botão "Salvar Endereços" é clicado, exibe os endereços no console (você pode personalizar esta parte)
+    $('#salvar-enderecos').click(function() {
+        if (enderecos.length === 0) {
+            alert('Nenhum endereço para salvar.');
+            return;
+        }
+
+        const texto = enderecos.join('\n'); // Converte o array de endereços em uma string com quebras de linha
+        const blob = new Blob([texto], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'enderecos.txt'; // Nome do arquivo a ser baixado
+        a.style.display = 'none';
+        document.body.appendChild(a);
+
+        a.click();
+
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
     });
 });
