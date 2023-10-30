@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <h1>Galeria de Fotos</h1>
+    <button type="button">ADICIONAR IMAGEM</button>
+  </header>
+  <form>
+    <h2>Inserir Imagem</h2>
+    <input type="url" id="end-imagem" required placeholder="URL da Imagem" />
+    <button type="submit" id="botao-add">Adicionar</button>
+    <button type="button" id="botao-cancelar">Cancelar</button>
+  </form>
+  <ul>
+    <li>
+      <img src="./images/foto1.jpg" alt="imagem de um gato" />
+      <div class="overlay-imagem">
+        <a href="./images/foto1.jpg" target="_blank" title="Ver imagem ampliada">
+          Ver imagem ampliada
+        </a>
+      </div>
+    </li>
+    <li>
+      <img src="./images/foto2.jpg" alt="imagem de um gato" />
+      <div class="overlay-imagem">
+        <a href="./images/foto2.jpg" target="_blank" title="Ver imagem ampliada">
+          Ver imagem ampliada
+        </a>
+      </div>
+    </li>
+    <li>
+      <img src="./images/foto3.jpg" alt="imagem de um gato" />
+      <div class="overlay-imagem">
+        <a href="./images/foto3.jpg" target="_blank" title="Ver imagem ampliada">
+          Ver imagem ampliada
+        </a>
+      </div>
+    </li>
+  </ul>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* Definições globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilização do cabeçalho */
+header {
+    background-color: #007ACC; 
+    padding: 12px 0;
+    color: #FFFFFF; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 4px solid #005B8D; /* Azul escuro para a borda */
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin-bottom: 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-text-stroke: 1px #1d6a9e; /* Propriedade específica para navegadores baseados em WebKit (como Chrome e Safari) */
+    color: #023c63; /* Cor do texto */
+}
+
+header button {
+    margin-top: 12px;
+}
+
+/* Estilização do formulário */
+form {
+    background-color: #baddf1; /* Fundo cinza claro */
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 12px;
+    color: #023c63;
+}
+
+/* Estilização de botões e inputs */
+input, button {
+    padding: 12px;
+    border: none;
+}
+
+input{
+    border-radius: 8px;
+}
+
+button, #botao-add, #botao-cancelar {
+    background-color: #007ACC; 
+    color: #FFFFFF;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Arial', Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0.5px solid #023c63;
+}
+
+/* Estilização dos botões específicos */
+
+/* Efeito de hover nos botões */
+button:hover, #botao-cancelar:hover, #botao-add:hover {
+    background-color: #005B8D; /* Azul escuro ao passar o mouse */
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none;
+    position: relative;
+    max-height: 180px;
+    overflow-y: hidden;
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay-imagem {
+    padding: 6px;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .5s;
+    
+}
+
+.overlay-imagem a {
+    font-size: smaller;
+    text-align: center;
+    color:antiquewhite;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 2px;
+}
+
+ul li:hover .overlay-imagem {
+    opacity: 1;
+}
