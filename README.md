@@ -26,7 +26,15 @@ loadImagesFromCookies: Enable or disable loading images from cookies. Default is
 saveImagesToCookies: Enable or disable saving images to cookies. Default is false.
 
 <h2>Usage</h2>
+
 Click the "ADD IMAGE" button to add an image to the gallery.
 Click the "Save URLs" button to save the image URLs as a text file.
 Hover over an image to view the "View Larger" link.
 Click the "View Larger" link to open the image in a new tab.
+Removing Images:
+If you wish to remove an image from the gallery, you can do so by following these steps:
+
+Hover over the image you want to remove.
+Once hovered, the "Remove" button will become visible.
+Click the "Remove" button to delete the image from the gallery. The image will be permanently removed, and the URL will no longer be saved.
+This functionality provides you with the flexibility to manage your gallery and keep it organized with only the images you want to display.
