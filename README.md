@@ -38,3 +38,6 @@ Hover over the image you want to remove.
 Once hovered, the "Remove" button will become visible.
 Click the "Remove" button to delete the image from the gallery. The image will be permanently removed, and the URL will no longer be saved.
 This functionality provides you with the flexibility to manage your gallery and keep it organized with only the images you want to display.
+
+<h3>Keywords</h3>
+jQuery, Image Gallery, Plugin, Gallery Plugin, Image Management, Web Development
