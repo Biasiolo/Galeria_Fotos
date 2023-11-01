@@ -61,10 +61,37 @@ $(document).ready(function() {
             // Função para adicionar imagens
             function addImage(url) {
                 var $newItem = $('<li style="display: none;"></li>');
-                $('<img src="' + url + '" alt="Nova Imagem" />').appendTo($newItem);
+                var $img = $('<img src="' + url + '" alt="Nova Imagem" />').appendTo($newItem);
                 $('<div class="overlay-imagem"><a href="' + url + '" target="_blank" title="Ver imagem ampliada">Ver imagem ampliada</a></div>').appendTo($newItem);
+
+                // Adicione um botão "Remover" a cada imagem
+                var $removeButton = $('<button class="remove-button">Remover</button>');
+                $newItem.append($removeButton);
+
                 $imageList.append($newItem);
                 $newItem.fadeIn(1000);
+
+                // Associe um evento de clique ao botão "Remover"
+                $removeButton.click(function() {
+                    removeImage($newItem, url);
+                });
+            }
+
+            // Função para remover imagens
+            function removeImage($item, url) {
+                // Remova a imagem do elemento <ul>
+                $item.remove();
+
+                // Remova a URL da matriz de endereços
+                var index = addresses.indexOf(url);
+                if (index > -1) {
+                    addresses.splice(index, 1);
+                }
+
+                // Salve as imagens atualizadas em cookies
+                if (settings.loadImagesFromCookies === true) {
+                    saveImagesToCookies(addresses);
+                }
             }
 
             // Função para salvar imagens em cookies
